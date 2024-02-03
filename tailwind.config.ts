@@ -72,6 +72,14 @@ const config = {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
       },
+      backgroundImage: {
+        "primary-gradient":
+          "linear-gradient(90deg, hsla(195, 86%, 50%, 1) 0%, hsla(236, 93%, 65%, 1) 100%)",
+        "purple-gradient":
+          "linear-gradient(90deg, rgba(37,29,71,1) 24%, rgba(5,38,56,1) 100%)",
+        "red-gradient": `linear-gradient(315deg, hsla(0, 83%, 42%, 1) 0%, hsla(8, 87%, 32%, 1) 100%)`,
+        "green-gradient": `linear-gradient(315deg, hsla(125, 83%, 42%, 1) 0%, hsla(143, 87%, 32%, 1) 98%)`,
+      },
     },
   },
   plugins: [require("tailwindcss-animate")],
