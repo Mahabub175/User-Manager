@@ -1,4 +1,4 @@
-- `Live Link:` `https://user-manager-omega.vercel.app/`
+- `Live Link:` https://user-manager-omega.vercel.app/
 
 ## Description
 
