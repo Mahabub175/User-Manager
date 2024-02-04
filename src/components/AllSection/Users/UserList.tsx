@@ -12,7 +12,7 @@ interface IUserListProps {
 export const UserList: React.FC<IUserListProps> = ({ user, i }) => {
   return (
     <div className="bg-white rounded-2xl p-1">
-      <div className="rounded-xl flex justify-between items-center p-5 border-2 border-blue-600/60">
+      <div className="rounded-xl flex flex-col gap-4 justify-center lg:flex-row lg:justify-between items-center p-5 border-2 border-blue-600/60">
         <div className="mr-5 font-bold">{i + 1}.</div>
         {user?.active_status === true ? (
           <div className="bg-green-gradient size-4 rounded-full mr-5"></div>

@@ -7,7 +7,9 @@ import { useState } from "react";
 
 const UserContainer = () => {
   const [name, setName] = useState("");
-  const { data: users, isLoading } = useGetUsersQuery(name);
+  const { data: users, isLoading } = useGetUsersQuery(name, {
+    pollingInterval: 200,
+  });
 
   if (isLoading) {
     <p>Loading...</p>;
@@ -15,12 +17,12 @@ const UserContainer = () => {
 
   return (
     <section className="">
-      <div className="flex justify-between mt-10 px-5 lg:px-0">
+      <div className="flex justify-between mt-10 px-5 lg:px-0 items-center">
         <AddUser />
         <Input
           type="text"
           placeholder="Search Users"
-          className="w-1/3 border border-gray-400 focus:border-none"
+          className="w-4/6 lg:w-1/3 border border-gray-400 focus:border-none"
           onChange={(e) => {
             setName(e.target.value);
           }}
@@ -28,7 +30,7 @@ const UserContainer = () => {
       </div>
       <div className="rounded-xl p-5 bg-primary-gradient h-auto my-10 lg:w-[1000px]">
         <div className="bg-white rounded-2xl p-1">
-          <div className="rounded-xl flex justify-between items-center p-5 border-2 border-blue-600/60">
+          <div className="rounded-xl hidden md:flex justify-between items-center p-5 border-2 border-blue-600/60">
             <div className="mr-5 font-bold">SL.</div>
 
             <p className={`flex-1 font-bold`}>Image</p>
@@ -45,7 +47,7 @@ const UserContainer = () => {
             </div>
           ))
         ) : (
-          <div className="bg-white text-2xl font-bold p-5 text center rounded-xl flex justify-center">
+          <div className="bg-white text-2xl font-bold p-5 text center rounded-xl flex justify-center mt-5">
             <p>There is no user right now!</p>
           </div>
         )}

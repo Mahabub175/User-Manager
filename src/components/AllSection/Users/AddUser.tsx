@@ -48,7 +48,7 @@ export const AddUser = () => {
   return (
     <Dialog>
       <DialogTrigger asChild>
-        <Button className="bg-primary-gradient px-16 py-6 font-bold">
+        <Button className="bg-primary-gradient lg:px-16 lg:py-6 font-bold">
           Add User
         </Button>
       </DialogTrigger>
